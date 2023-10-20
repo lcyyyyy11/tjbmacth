@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四川省中小学青年教师教学竞赛</title>
+    <link rel="icon" href="img/pslogo.png" type="image/x-icon"/>
+    <link href="css/log.css" rel="stylesheet"/>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap-min.js"></script>
+    <link href="css/bootstrap-min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
+    <script type="text/javascript" src="js/rsa.min.js"></script>
+</head>
+<body>
+<div id='stars2'></div>
+<input type="hidden" id="phone" value=""/>
+<div class="container-fluid section">
+    <div class="osection">
+        <div class="isection">
+            <div class="leftsection">
+                <div class="drow">
+                    <div class=" glyphicon glyphicon-calendar  ifont" style="color: rgb(242, 114, 94);font-size: 60px;">
+                        <span class="efont " style="display: block;font-size:18px; color: black">筹划准备</span>
+                    </div>
+<!--                    <div class="glyphicon glyphicon-user ifont" style="color: rgb(247, 181, 94);">-->
+<!--                        <span class="efont ">活动报名</span>-->
+<!--                    </div>-->
+<!--                    <div class="glyphicon glyphicon-send ifont" style="color: rgb(42, 199, 157);">-->
+<!--                        <span class="efont">上传材料</span>-->
+<!--                    </div>-->
+                    <div class="glyphicon glyphicon-sort-by-attributes ifont" style="color: rgb(242, 114, 94);">
+                        <span class="efont">抽签分组</span>
+                    </div>
+                    <div class="glyphicon glyphicon-expand ifont" style="color: rgb(247, 181, 94);">
+                        <span class="efont">现场评审</span>
+                    </div>
+                    <div class="glyphicon glyphicon-cloud-upload ifont" style="color: rgb(242, 114, 94);">
+                        <span class="efont">赛事统计</span>
+                    </div>
+                </div>
+                <div class="desc">
+                    <p class="pfont">
+                        &emsp;&emsp;本阶段提供赛事活动的创建、赛事项目分类管理、赛事日程安排、赛事设置、评分标准设置、赛事人员管理和赛事官网管理等功能，并指定承办方以及承办方管理人员，在比赛最初筹备阶段实施。
+                    </p>
+                    <p class="pfont">
+                        &emsp;&emsp;本阶段为参赛选手提供报名服务和查看报名状态功能；为组委会和承办方提供对参赛选手报名信息审核的功能；同时为市/州联络员提供上传比赛材料附件的功能。市/州联络员为选手进行集体报名，报名后，选手可登录官网完善信息。
+                    </p>
+                    <p class="pfont">
+                        &emsp;本阶段为参赛选手网上报名成功后，提供参赛选手通过竞赛官网上传参赛作品功能。上传参赛作品时，参赛选手能通过系统实时了解比赛作品要求，以及材料上传的审核状态；同时也提供组委会和承办方统一上传参赛选手作品的功能，以及州/市联络人和组委会对作品的审核和统计功能。
+                    </p>
+                    <p class="pfont">
+                        &emsp;&emsp;本阶段为参赛选手进入决赛后的比赛环节之一。比赛前，组委会和承办方对参赛选手进行现场报到确认，然后对参赛选手进行竞赛分组安排与参赛序号抽签功能，抽签过程采用随机、公开的原则。
+                    </p>
+                    <p class="pfont">
+                        &emsp;&emsp;本阶段为参赛选手的现场比赛环节。现场比赛时，组委会和承办方对参赛选手进行身份校验、抽取比赛题目、下载选手PPT、顺序入场和时间控制；同时，提供专家为选手进行材料打分和现场比赛打分的功能。
+                    </p>
+                    <p class="pfont">
+                        &emsp;&emsp;本阶段为比赛结束后，组委会和承办方对比赛评分结果进行确认与锁定、扣罚处理，同时，产生本次比赛的所有参赛选手最终成绩与排名，在比赛官网发布比赛结果和相关新闻信息等。
+                    </p>
+
+                </div>
+            </div>
+            <div class="rightsection">
+                <form id="loginform">
+                    <div class="fpdiv">
+                        <div class="text-right" style="padding-left: 13%;width: 90%;font-size: 20px;">
+                            <p class="col-sm-3">
+                                <img src="img/pslogo.png" style="width: 70px;margin-top: 1rem" />
+                            </p>
+                            <p class="col-sm-9">
+                            <p class="title-word" id="matchName" style="text-align: center;">
+                                四川省中小学青年教师
+                            </p>
+                                <p style="text-align: center;">教学竞赛服务平台</p>
+                            <p style="text-align: center;font-size:15px;"><i>（第七届）</i></p>
+
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <!-- <h3 class="fh">用户登录</h3> -->
+                    <div class="frow form-group">
+                        <span class="glyphicon glyphicon-user fspan"></span>
+                        <input type="text" id="User" placeholder="账号"/>
+                    </div>
+                    <div class="frow form-group">
+                        <span class="glyphicon glyphicon-lock fspan"></span>
+                        <input type="password" id="Pwd" placeholder="密码"/>
+                    </div>
+                    <div class="frow form-group">
+                            <input type="text" id="VerifyCode" name="VerifyCode" placeholder="验证码" class="ipt" maxlength="4" autocomplete="off"/>
+                            <a id="ReloadCode" href="javascript:void(0)" style="margin-left:10px;" title="点击更换验证码">
+                                <img authSrc="/ps/user/loginVerify/getValidCode" is="auth-img" id="ImgValidCode" width="115" height="40"/>
+                            </a>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn bg-primary fbtn" id="loginBtn">登 录</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script>
+    $(function () {
+
+        var i = 0;
+        $('.desc').children().eq(0).css('display', 'block');
+        var change = function (index) {
+            $('.drow').children().eq(index).css('font-size', '60px', 'color', 'black');
+            $('.drow').children().eq(index).siblings().css('font-size', '30px');
+            $('.drow').children().eq(index).children().css({'font-size': '18px', 'color': 'black'});
+            $('.drow').children().eq(index).siblings().children().css({'font-size': '10px', 'color': '#aaa'});
+            $('.desc').children().eq(index).css('display', 'block');
+            $('.desc').children().eq(index).siblings().css('display', 'none');
+        }
+
+        $('.ifont').click(function () {
+            index = $('.ifont').index(this);
+            change(index);
+            stop();
+        })
+
+        $('.ifont').mouseover(function () {
+            index = $('.ifont').index(this);
+            change(index);
+            stop();
+        })
+        $('.ifont').mouseout(function () {
+            index = $('.ifont').index(this);
+            i = index;
+            star();
+        })
+
+        var dt = setInterval(function () {
+            change(i);
+            if (i < 6) {
+                i++;
+            } else {
+                i = 0;
+            }
+        }, 3000);
+
+        function stop() {
+            clearInterval(dt);
+        }
+
+        function star() {
+            dt = setInterval(function () {
+                change(i);
+                if (i < 6) {
+                    i++;
+                } else {
+                    i = 0;
+                }
+            }, 3000);
+        }
+    })
+
+</script>
+<script src="js/zzsCommon.min.js"></script>
+<script src="js/common.min.js"></script>
+<script src="js/LogIn.js"></script>
+
+</html>

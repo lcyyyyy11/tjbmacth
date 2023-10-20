@@ -1,0 +1,133 @@
+/* 颜色 */
+.bg-green {
+	/* 省市区-选拔中颜色 */
+	background-color: #b8e986;
+}
+
+.bg-red-pink {
+	/* 省市区-普通颜色 */
+	background-color: #ff6c80;
+}
+
+.bg-gray {
+	/* icon未选中 灰色 */
+	background-color: #e0e3eb;
+}
+
+.bg-gold-grd {
+	/* 省市区背景渐变金 */
+	/* border: 1.5px solid #ffa4bd; */
+	background: -moz-linear-gradient(top, #ffe200 0%, #d59e28 100%);
+	background: -webkit-gradient(linear, top, bottom, color-stop(0%, #ffe200), color-stop(100%, #d59e28));
+	background: -webkit-linear-gradient(top, #ffe200 0%, #d59e28 100%);
+	background: -o-linear-gradient(top, #ffe200 0%, #d59e28 100%);
+	background: -ms-linear-gradient(top, #ffe200 0%, #d59e28 100%);
+	background: linear-gradient(to bottom, #ffe200 0%, #d59e28 100%);
+}
+.text-pblue{
+	color: #04275D;
+}
+
+.text-blue{
+	color: #006DCC;
+}
+
+.text-light-pblue{
+	color: #4e5a73;
+}
+.text-light-gray{
+	color: #a0a0a0;
+}
+.text-red-pink{
+	color: #ff6c80;
+}
+.text-red-overflow{
+	padding-left:4rem ;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;cursor: pointer;
+}
+/*.text-red-overflow:hover {*/
+
+/*	overflow: visible;*/
+
+/*}*/
+.text-white-light{
+	color: #FFFFFF;
+}
+
+.text-color-footer{
+	color: #1f8bcb;
+}
+
+/* 字体样式 */
+.text-lg-ws{
+	font-size: 23px;
+	font-weight: 100;
+}
+
+.text-xxlg{
+	font-size: 30px;
+}
+
+.text-xlg{
+	font-size: 26px;
+}
+
+.text-lg{
+	font-size: 23px;
+}
+
+.text-slg{
+	font-size: 20px;
+}
+
+.text-xmd{
+	font-size: 18px;
+}
+
+.text-md{
+	font-size: 16px;
+}
+.text-sm{
+	font-size: 12px;
+}
+.text-bold{
+	font-weight: bold;
+}
+
+.cursorp{
+	cursor: pointer;
+}
+
+/* 滚动条样式 */
+.vf-scroll::-webkit-scrollbar {
+	margin-left: -1px;
+	/*滚动条整体样式*/
+	width: 10px;
+	/*高宽分别对应横竖滚动条的尺寸*/
+	height: 1px;
+}
+
+.vf-scroll::-webkit-scrollbar-thumb {
+	/*滚动条里面小方块*/
+	border-radius: 10px;
+	background-color: skyblue;
+	background-image: -webkit-linear-gradient(45deg,
+			rgba(255, 255, 255, 0.2) 25%,
+			transparent 25%,
+			transparent 50%,
+			rgba(255, 255, 255, 0.2) 50%,
+			rgba(255, 255, 255, 0.2) 75%,
+			transparent 75%,
+			transparent);
+}
+.vf-scroll::-webkit-scrollbar-track {
+	/*滚动条里面轨道*/
+	box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+	background: #ffffff;
+	border-radius: 10px;
+}
+
+#webTitle{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

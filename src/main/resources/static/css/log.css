@@ -1,0 +1,196 @@
+*{
+    font-family: "微软雅黑";
+}
+body{
+    background: radial-gradient(ellipse at top, #4879a1 0%, AliceBlue 100%);
+}
+html {
+    height: 100%;
+    /* background: radial-gradient(ellipse at bottom, #093b74 0%, #d7dcf3 100%); */
+    overflow: hidden;
+}
+
+
+#stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: 1611px 1508px #FFF , 860px 689px #FFF , 698px 745px #FFF , 272px 34px #FFF , 725px 1018px #FFF , 407px 1378px #FFF , 1495px 1267px #FFF , 937px 531px #FFF , 353px 823px #FFF , 1587px 1059px #FFF , 1449px 934px #FFF , 1411px 1568px #FFF , 935px 1387px #FFF , 612px 957px #FFF , 1957px 816px #FFF , 946px 1169px #FFF , 1510px 1942px #FFF , 49px 569px #FFF , 222px 318px #FFF , 1766px 1356px #FFF , 1470px 1779px #FFF , 1748px 1534px #FFF , 971px 136px #FFF , 1898px 18px #FFF , 11px 390px #FFF , 1037px 1962px #FFF , 700px 1956px #FFF , 1114px 176px #FFF , 1128px 787px #FFF , 1858px 492px #FFF , 892px 463px #FFF , 1204px 1382px #FFF , 79px 310px #FFF , 808px 1496px #FFF , 988px 1510px #FFF , 149px 166px #FFF , 1220px 1666px #FFF , 1201px 243px #FFF , 675px 1735px #FFF , 1617px 1273px #FFF , 1823px 1525px #FFF , 1987px 1310px #FFF , 1174px 1804px #FFF , 1990px 1648px #FFF , 649px 1207px #FFF , 783px 39px #FFF , 1642px 1894px #FFF , 718px 1211px #FFF , 992px 1424px #FFF , 765px 1062px #FFF , 1938px 371px #FFF , 83px 1103px #FFF , 1010px 92px #FFF , 277px 1449px #FFF , 211px 660px #FFF , 206px 373px #FFF , 1273px 276px #FFF , 1731px 167px #FFF , 1455px 1449px #FFF , 730px 1211px #FFF , 1681px 1628px #FFF , 1333px 1726px #FFF , 627px 1322px #FFF , 162px 1847px #FFF , 1175px 145px #FFF , 878px 1347px #FFF , 543px 1875px #FFF , 1359px 836px #FFF , 1852px 640px #FFF , 1072px 665px #FFF , 1802px 725px #FFF , 1783px 211px #FFF , 57px 567px #FFF , 395px 1935px #FFF , 1810px 1744px #FFF , 1561px 275px #FFF , 804px 1603px #FFF , 660px 1581px #FFF , 1455px 1377px #FFF , 34px 1023px #FFF , 1631px 227px #FFF , 1268px 1443px #FFF , 1604px 355px #FFF , 500px 28px #FFF , 1280px 1744px #FFF , 1795px 875px #FFF , 1038px 1371px #FFF , 204px 532px #FFF , 1753px 1763px #FFF , 636px 1750px #FFF , 1185px 613px #FFF , 692px 160px #FFF , 1389px 399px #FFF , 1028px 74px #FFF , 1053px 1136px #FFF , 1308px 1251px #FFF , 1120px 1686px #FFF , 691px 88px #FFF , 853px 1436px #FFF , 1524px 1059px #FFF , 851px 119px #FFF , 1249px 718px #FFF , 1919px 1749px #FFF , 1004px 1991px #FFF , 1897px 7px #FFF , 1244px 76px #FFF , 622px 906px #FFF , 552px 220px #FFF , 29px 402px #FFF , 723px 286px #FFF , 379px 877px #FFF , 840px 1888px #FFF , 530px 528px #FFF , 1580px 1857px #FFF , 1759px 1044px #FFF , 497px 726px #FFF , 1739px 545px #FFF , 139px 1573px #FFF , 1826px 1114px #FFF , 36px 1325px #FFF , 1229px 1754px #FFF , 458px 597px #FFF , 802px 1017px #FFF , 1174px 928px #FFF , 1590px 1981px #FFF , 1305px 538px #FFF , 175px 234px #FFF , 1974px 323px #FFF , 136px 1601px #FFF , 16px 508px #FFF , 452px 1985px #FFF , 150px 1502px #FFF , 1567px 217px #FFF , 560px 1456px #FFF , 1053px 27px #FFF , 1016px 329px #FFF , 1812px 466px #FFF , 512px 237px #FFF , 95px 1378px #FFF , 1040px 1317px #FFF , 1381px 406px #FFF , 765px 1572px #FFF , 1767px 1874px #FFF , 1866px 1895px #FFF , 1380px 900px #FFF , 1148px 1955px #FFF , 660px 7px #FFF , 1625px 392px #FFF , 1881px 1187px #FFF , 1688px 1454px #FFF , 957px 606px #FFF , 432px 909px #FFF , 1138px 1240px #FFF , 1594px 939px #FFF , 1870px 963px #FFF , 335px 476px #FFF , 817px 72px #FFF , 1665px 1313px #FFF , 58px 1446px #FFF , 1920px 804px #FFF , 1374px 1686px #FFF , 414px 213px #FFF , 1232px 1734px #FFF , 128px 122px #FFF , 231px 985px #FFF , 152px 1536px #FFF , 488px 1615px #FFF , 907px 1388px #FFF , 59px 364px #FFF , 332px 512px #FFF , 833px 619px #FFF , 1406px 981px #FFF , 1386px 1603px #FFF , 1796px 744px #FFF , 140px 1523px #FFF , 1272px 1038px #FFF , 367px 942px #FFF , 1172px 1643px #FFF , 1569px 1331px #FFF , 138px 434px #FFF , 1369px 1226px #FFF , 1693px 1931px #FFF , 460px 53px #FFF , 1000px 1679px #FFF , 148px 1541px #FFF , 397px 848px #FFF , 541px 1421px #FFF , 1364px 397px #FFF , 1286px 168px #FFF , 1852px 1773px #FFF , 975px 1238px #FFF , 1127px 419px #FFF , 1538px 408px #FFF , 720px 1901px #FFF , 1942px 1726px #FFF , 1065px 126px #FFF , 486px 1660px #FFF , 617px 583px #FFF , 1116px 1714px #FFF , 1993px 1446px #FFF;
+    animation: animStar 100s linear infinite;
+}
+
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
+.section{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+.section .osection{
+    position: relative;
+    width: 1100px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+    /*box-shadow: 0 0 50px rgba(0,0, 0, 0.5);*/
+    border-radius: 10px;
+}
+.section .osection .isection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+/* 左侧布局 */
+.section .osection .isection .leftsection{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background-color: #fff;
+    border-right: dashed 3px rgb(103, 174, 230);
+    padding-left: 20px;
+}
+.leftsection .ifont {
+    font-size: 30px;
+    margin: 32px;
+    margin-bottom: 20px !important;
+    cursor: pointer;
+    position: relative;
+    line-height: 80px;
+    text-align: center;
+}
+.leftsection .efont {
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    position: absolute;
+    bottom: -50px;
+    font-family: "微软雅黑";
+    cursor: pointer;
+    text-align: left;
+    width: 72px;
+    color: #bbb;
+}
+.leftsection .pfont {
+    display: none;
+    padding: 30px 30px 30px 20px;
+    font-size: 1.7rem;
+    line-height: 3rem;
+    color: rgb(121, 121, 121);
+    margin-top: 10px;
+}
+.section .osection .isection .leftsection .drow{
+    margin-top: 3rem;
+}
+/* 右侧布局 */
+.section .osection .isection .rightsection{
+    position: relative;
+    width: 40%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section .osection .isection .rightsection form{
+    width: 100%;
+}
+.section .osection .isection .rightsection form h4{
+    font-size: 20px;
+}
+.section .osection .isection .rightsection form h3{
+    font-size: 30px;
+    font-weight: 800;
+}
+.section .osection .isection .rightsection form .fpdiv{
+    /* margin-top: 10px; */
+    margin-bottom: 60px;
+    text-align: center;
+    width: 100%;
+    color: rgb(103, 174, 230);
+}
+.section .osection .isection .rightsection form .frow{
+    margin: 10px 0 15px 45px;
+}
+#VerifyCode{
+    width: 35%;
+    margin-left: 40px;
+}
+#ImgValidCode{
+
+}
+#Idfybtn{
+    margin-left: 0;
+    width: 23% ;
+    font-size: 13px;
+}
+.help-block {
+    margin-left: 50px;
+}
+
+.bv-no-label {
+    top: 10px !important;
+    right: 40px !important;
+}
+.section .osection .isection .rightsection form .fspan{
+    color: #ccc;
+    padding: 10px;
+    left: 40px;
+    z-index: 1;
+}
+.section .osection .isection .rightsection form input{
+    position: relative;
+    width: 70%;
+    border: solid 1px rgb(103, 174, 230);
+    border-radius: 20px;
+    height: 40px;
+    outline: none;
+    box-shadow: none;
+    margin: 8px 0;
+    font-size: 14px;
+    padding-left: 30px;
+    font-weight: 300;
+}
+.section .osection .isection .rightsection form .fbtn{
+    width: 63%;
+    background: rgb(103, 174, 230);
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-left: 85px;
+    border-radius: 20px;
+    line-height: 25px;
+}
+/* footer底部版权声明 */
+.fsection{
+    text-align: center;
+}
+@media (max-width: 1098px) {
+    .section .osection{
+        max-width: 400px;
+    }
+    .section .osection .leftsection{
+        display: none;
+    }
+    .section .osection .rightsection{
+        width: 100% !important;
+        margin: 0 auto;
+    }
+    #Idfybtn{
+        font-size: 11px;
+    }
+}

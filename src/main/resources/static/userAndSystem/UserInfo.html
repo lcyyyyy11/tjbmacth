@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统用户信息</title>
+    <link rel="icon" href="../img/pslogo.png" type="image/x-icon"/>
+    <link href="../css/bootstrap-min.css" rel="stylesheet"/>
+    <link href="../css/ui.jqgrid-bootstrap.css" rel="stylesheet" />
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/grid.locale-cn.js"></script>
+    <script src="../js/bootstrap-min.js"></script>
+    <script src="../js/jquery.jqGrid.min.js"></script>
+    <style>
+        .jqResize.ui-resizable-handle.ui-resizable-se.glyphicon.glyphicon-import{display: none}
+        .m_mark{color:red;font-size:14px;}
+        #ifactive, #userrole{padding: 0.5em 0.3em;}
+        .btn{border-radius: 10px;color: #fff;}
+        .btn:hover{color: #FFF}
+        #gbox_Grid .ui-jqgrid-bdiv {
+            overflow-x: hidden!important; /*隐藏jqgrid横向滚动条*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" style="margin-bottom: 10px" id="btnDiv">
+                <a class="btn btn-default" href="javascript:;" type="button" id="btnValid" style="background-color: #83b2e1;">批量启用</a>
+                <a class="btn btn-default" href="javascript:;" type="button" id="btnInvalid" style="background-color: #ef8f56;">批量停用</a>
+                <a class="btn btn-default" href="javascript:;" type="button" id="btnOffline" style="background-color: #4ac067;">批量设置离线</a>
+            </div>
+            <div class="col-sm-12">
+                <table id="Grid"></table>
+                <div id="Page"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/zzsCommon.min.js"></script>
+<script src="../js/common.min.js"></script>
+<script src="js/UserInfo.js"></script>
+</html>

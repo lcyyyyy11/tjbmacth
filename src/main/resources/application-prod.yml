@@ -1,0 +1,36 @@
+server:
+  port: 6091
+
+spring:
+  webflux:
+    static-path-pattern: /**
+  data:  # 数据库配置
+    mysql:
+      host: 192.168.0.64
+      port: 43306
+      database: psteachskillmatch
+      username: root
+      password: ZZSlxh@sicnu123
+  codec:
+    max-in-memory-size: 10MB # Exceeded limit on max bytes to buffer : 262144
+
+TeachSkillFiles:  # 文件图片的位置
+  BannerPic: /dbmnt/dataspace/PSTeachSkillMatch/BannerPic  # 轮播图
+  ActivityPic: /dbmnt/dataspace/PSTeachSkillMatch/ActivityPic  # 风采图片
+  MatchPic: /dbmnt/dataspace/PSTeachSkillMatch/MatchPic  # 赛事图片（赛事活动界面）
+  ModelFiles: /dbmnt/dataspace/PSTeachSkillMatch/ModelFiles  # 模板文件
+  ActivityVideo: /dbmnt/dataspace/PSTeachSkillMatch/ActivityVideo  # 风采视频
+  MatchPersonPic: /dbmnt/dataspace/PSTeachSkillMatch/MatchPersonPic  # 参赛选手证件照
+  MatchPersonMaterials: /dbmnt/dataspace/PSTeachSkillMatch/MatchPersonMaterials  # 选手材料文件
+  MatchCityMaterials: /dbmnt/dataspace/PSTeachSkillMatch/MatchCityMaterials  # 市州材料文件
+  MatchNoticeMaterials: /dbmnt/dataspace/PSTeachSkillMatch/MatchNoticeMaterials  # 通知公告附件
+  MatchMaterials: /dbmnt/dataspace/PSTeachSkillMatch/MatchMaterials  # 赛事附件
+  MatchLiveQrCodes: /dbmnt/dataspace/PSTeachSkillMatch/MatchLiveQrCodes  # 赛事二维码
+  UserManual: /dbmnt/dataspace/PSTeachSkillMatch/UserManual  # 用户使用手册
+
+
+logging:  # 日志文件
+  file:
+    path: /dbmnt/dataspace/PSTeachSkillMatch/logs/psteachskillMatchlog
+    max-size: 50MB
+    max-history: 30

@@ -1,0 +1,47 @@
+server:
+  port: 8091
+
+spring:
+  webflux:
+    static-path-pattern: /**
+  data:  # 数据库配置
+    mysql:
+#      host: 43.139.61.66
+#      port: 3306
+#      database: psteachskillmatch
+#      username: root
+#      password: 980541
+      host: localhost
+      port: 3306
+      database: tjbmatch #TJBmatch
+      username: root
+      password: dengziqi
+#      mysql:
+#      host: 192.168.0.64
+#      port: 43306
+#      database: psteachskillmatch
+#      username: root
+#      password: ZZSlxh@sicnu123
+  codec:
+    max-in-memory-size: 10MB # Exceeded limit on max bytes to buffer : 262144
+
+TeachSkillFiles:  # ???????
+  BannerPic: D:\PSTeachSkillMatch\BannerPic  #
+  ActivityPic: D:\PSTeachSkillMatch\ActivityPic  # ????
+  MatchPic: D:\PSTeachSkillMatch\MatchPic  # ????????????
+  MatchTopicPic: D:\PSTeachSkillMatch\MatchTopicPic  # ????
+  ModelFiles: D:\PSTeachSkillMatch\ModelFiles  # ????
+  ActivityVideo: D:\PSTeachSkillMatch\ActivityVideo  # ????
+  MatchPersonPic: D:\PSTeachSkillMatch\MatchPersonPic  # ???????
+  MatchPersonMaterials: E:\MatchPersonMaterials  # ??????
+  MatchCityMaterials: D:\PSTeachSkillMatch\MatchCityMaterials  # ??????
+  MatchNoticeMaterials: D:\PSTeachSkillMatch\MatchNoticeMaterials  # ??????
+  MatchMaterials: D:\PSTeachSkillMatch\MatchMaterials  # ????
+  MatchLiveQrCodes: D:\PSTeachSkillMatch\MatchLiveQrCodes  # ?????
+  UserManual: D:\PSTeachSkillMatch\UserManual  # ??????
+
+logging:  # ????
+  file:
+    path: D:\PSTeachSkillMatch\logs\psTeachSkillMatchlog
+    max-size: 50MB
+    max-history: 30

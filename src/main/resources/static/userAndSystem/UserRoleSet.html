@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>角色与权限</title>
+    <link rel="icon" href="../img/pslogo.png" type="image/x-icon" />
+    <link href="../css/bootstrap-min.css" rel="stylesheet" />
+    <link href="../css/ui.jqgrid-bootstrap.css" rel="stylesheet" />
+    <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.css" rel="stylesheet">
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/grid.locale-cn.js"></script>
+    <script src="../js/bootstrap-min.js"></script>
+    <script src="../js/jquery.jqGrid.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-select.min.js"></script>
+    <style>
+        #gbox_Grid0 .ui-jqgrid-bdiv,#gbox_Grid1 .ui-jqgrid-bdiv, #gbox_Grid2 .ui-jqgrid-bdiv{ overflow-x: hidden!important; /*隐藏jqgrid横向滚动条*/ }
+        .m_mark{color:red;font-size:14px;}
+        #accordion .panel-default>.panel-heading {
+            color: #333!important;
+            background-color: #f5f5f5!important;
+            border-color: #ddd!important;
+        }
+        .navButton,.jqResize.ui-resizable-handle.ui-resizable-se.glyphicon.glyphicon-import{display: none}
+        /*.panelCur{*/
+            /*background-color: rgb(114, 172, 182) !important;*/
+        /*}*/
+
+        #gbox_Grid2{width: 450px!important;}
+        .btn{border-radius: 10px;color: #fff}
+        .btn:hover{color: #FFF}
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="padding-top: 0.5em; padding-bottom: 0.5em;">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">角色管理</a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body" style="padding-top: 0.3em;">
+                    <div class="row">
+                        <div class="col-sm-12" id="table_list_0" style="padding-left: 0.5em; padding-right: 0.5em;">
+                            <table id="Grid0"></table>
+                            <div id="Page0"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" style="padding-top: 0.5em; padding-bottom: 0.5em;">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">角色权限</a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body" style="padding-top: 0.3em;">
+                    <form class="form-inline" role="form">
+                        <div class="row">
+                            <div class="col-sm-12" style="margin-bottom: 5px;">
+                                <a href="javascript:;" class="btn btn-default form-control" id="A1" style="background-color: #4ac067;">刷新</a>
+                                <a href="javascript:;" class="btn btn-default form-control" id="A2" style="background-color: #7cbee7">保存权限修改</a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-sm-7" id="table_list_1">
+                            <table id="Grid1"></table>
+                            <div id="Page1"></div>
+                        </div>
+                        <div class="col-sm-5" id="table_list_2">
+                            <table id="Grid2"></table>
+                            <div id="Page2"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/zzsCommon.min.js"></script>
+<script src="../js/common.min.js"></script>
+<script src="js/UserRoleSet.js"></script>
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>四川省中小学青年教师教学竞赛</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="icon" href="img/pslogo.png" type="image/x-icon"/>
+    <link href="css/bootstrap-min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/MainFrm.css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap-min.js"></script>
+    <style>
+        #MatchNoticePage .close,#MatchRequirePage .close{display: none;}
+
+        .sys{border-radius: 10px;color: #fff}
+        .sys:hover{color: #FFF}
+    </style>
+
+</head>
+<body>
+<div class="container-fluid" style="height: 100%">
+    <input type="hidden" id="selectedMatch" value="" />
+    <input type="hidden" id="changeFlag" value="" />
+
+    <select id="activeMatch" style="display: none"></select>
+
+    <div class="row text-white" style="position: absolute;width: 100%;padding: 15px 0;">
+        <nav class="logo" id="hlogo">
+            <div class="col-sm-6">
+                <a href="javaScript:;" target="_blank" style="display: inline-block;">
+                    <img id="XTLogo" src="img/pslogo.png" height="55" alt="logo"/>
+                </a>
+                <label style="vertical-align: middle;">
+                    <h4 style="font-size: 1.8em;margin-bottom: 5px">四川省中小学青年教师教学竞赛</h4>
+                </label>
+            </div>
+            <div class="col-sm-6 text-right" style="height: 67px;padding: 15px;">
+                <div id="downloadDiv" style="display: inline-block;height: 100%;">
+                    <a href="javascript:;" id="download" class="text-white">
+                        <span class="glyphicon glyphicon-download-alt"></span>
+                        下载操作指南
+                    </a>
+                </div>
+                <div id="previewDiv" style="display: inline-block;height: 100%;margin-left: 0.5rem;">
+                    <a href="javascript:;" id="preview" class="text-white">
+                        <span class="glyphicon glyphicon-send"></span>
+                        预览操作指南
+                    </a>
+                </div>
+
+                <div style="display: inline-block;height: 100%;margin-left: 5rem;">
+                    <span class="glyphicon glyphicon-user" style="color: rgb(255,219,110);"></span>
+                    <span class="uname">主办方管理员</span>
+                </div>
+                <div style="display: inline-block;height: 100%;margin-left: 0.5rem;">
+                    <a href="javascript:;"  class="uexit text-white">
+                        <span class="glyphicon glyphicon-off" style="color: rgb(255,219,110);"></span> 退出登录
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!--图片展示区-->
+    <div class="row" style="height: 80px;background-image: url(img/banner.jpg);background-size: 100%">
+    </div>
+
+    <!--流程展示-->
+    <div class="row mtop10 mbottom10">
+        <div class="col-sm-6 col-md-6 col-lg-6" style="padding-left: 5px;border-left: 10px solid rgb(102, 172, 216);">
+
+            <span style="font-weight: 600;font-size: 2.5rem">阶段与进程-</span>
+            <span style="font-weight: 600;font-size: 2rem;color:rgb(219, 160, 110) ;" class="matchName" >四川省中小学青年教师教学竞赛 </span>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-6 text-right">
+            <a class="btn btn-default mtop0 ml5 sys" id="SystemManageBtn" style="background-color: #47BAD1;"><span class="glyphicon glyphicon-cog"></span> 系统设置</a>
+            <a class="btn btn-default mtop0 ml5 sys" id="ChangeMatchBtn" style="background-color: #ef8f56;"><span class="glyphicon glyphicon-bullhorn"></span> 切换赛事</a>
+            <a class="btn btn-default  mtop0 ml5 sys" id="ChangeMatchPwdBtn" style="background-color: #83b2e1;"><span class="glyphicon glyphicon-wrench"></span> 修改密码</a>
+
+        </div>
+    </div>
+    <hr>
+
+    <div class="stepCont stepCont1">
+        <!-- 菜单导航显示-->
+        <div class='ystep-container ystep-lg ystep-blue'></div>
+        <hr id="stepSpreate">
+        <!-- 分页容器-->
+        <div class="row">
+            <div class="pageCont">
+                <div id="page1" class="stepPage prepare" >
+                    <div class="col-sm-10 col-sm-offset-1 p0">
+                        <div class="col-sm-3">
+                            <div class="col-sm-11 text-center p0">
+                                <a class="btn btn-white stageBtn btn101" data-funcid="101" id="MatchActivityBtn" style="border: 1px solid rgb(230, 230, 230);">
+                                    <span class="glyphicon glyphicon-stats btnlogo"></span><br>
+                                    <span id="MatchActivitySpan"></span>
+                                </a>
+                                <div class="col-sm-12 p0">
+                                    <label class="lableStyle mtop5" id="MatchActivityLable"></label>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 text-right p0">
+                                <span class="glyphicon glyphicon-arrow-right arrowShow"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-sm-11 text-center p0">
+                                <a class=" btn btn-white stageBtn btn102" data-funcid="102" id="MatchClassifyBtn" style="border: 1px solid rgb(230, 230, 230);">
+                                    <span class="glyphicon glyphicon-align-justify btnlogo"></span><br>
+                                    <span id="MatchClassifySpan"></span>
+                                </a>
+                                <div class="col-sm-12 p0">
+                                    <label class="lableStyle mtop5" id="MatchClassifyLable"></label>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 text-right p0">
+                                <span class="glyphicon glyphicon-arrow-right arrowShow"></span>
+                            </div>
+                        </div>
+<!--                        <div class="col-sm-3">-->
+<!--                            <div class="col-sm-11 text-center p0">-->
+<!--                                <a class="btn btn-white stageBtn btn103" data-funcid="103" id="MatchScheduleBtn" style="border: 1px solid rgb(230, 230, 230);">-->
+<!--                                    <span class="glyphicon glyphicon-list-alt btnlogo" ></span><br>-->
+<!--                                    <span id="MatchScheduleSpan"></span>-->
+<!--                                </a>-->
+<!--                                <div class="col-sm-12 p0">-->
+<!--                                    <label class="lableStyle mtop5" id="MatchScheduleLable"></label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-1 text-right p0">-->
+<!--                                <span class="glyphicon glyphicon-arrow-right arrowShow"></span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        <div class="col-sm-3">
+                            <div class="col-sm-11 text-center p0">
+                                <a class=" btn btn-white stageBtn btn106" data-funcid="106" id="GradeStandardBtn" style="border: 1px solid rgb(230, 230, 230);">
+                                    <span class="glyphicon glyphicon-calendar btnlogo"></span><br>
+                                    <span id="GradeStandardSpan"></span>
+                                </a>
+                                <div class="col-sm-12 p0">
+                                    <label class="lableStyle mtop5" id="GradeStandardLable"></label>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 text-right p0">
+                                <span class="glyphicon glyphicon-arrow-right arrowShow"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-sm-11 text-center">
+                                <a class=" btn btn-white stageBtn btn107" data-funcid="107" id="PersonManageBtn" style="border: 1px solid rgb(230, 230, 230);">
+                                    <span class="glyphicon glyphicon-user btnlogo" ></span><br>
+                                    <span id="PersonManageSpan"></span>
+                                </a>
+                                <div class="col-sm-12 p0">
+                                    <label class="lableStyle mtop5" id="PersonManageLable"></label>
+                                </div>
+                            </div>
+                        </div>
+<!--                        <div class="col-sm-3">-->
+<!--                            <div class="col-sm-11 text-center p0">-->
+<!--                                <a class=" btn btn-white stageBtn btn104" data-funcid="104" id="MatchSetBtn" style="border: 1px solid rgb(230, 230, 230);">-->
+<!--                                    <span class="glyphicon glyphicon-cog btnlogo"></span><br>-->
+<!--                                    <span id="MatchSetSpan"></span>-->
+<!--                                </a>-->
+<!--                                <div class="col-sm-12 p0">-->
+<!--                                    <label class="lableStyle mtop5" id="MatchSetLable"></label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+                    </div>
+                    <div class="col-sm-10 col-sm-offset-1 p0">
+
+<!--                        <div class="col-sm-3">-->
+<!--                            <div class="col-sm-11 text-center p0">-->
+<!--                                <a class=" btn btn-white stageBtn btn106" data-funcid="106" id="GradeStandardBtn" style="border: 1px solid rgb(230, 230, 230);">-->
+<!--                                    <span class="glyphicon glyphicon-calendar btnlogo"></span><br>-->
+<!--                                    <span id="GradeStandardSpan"></span>-->
+<!--                                </a>-->
+<!--                                <div class="col-sm-12 p0">-->
+<!--                                    <label class="lableStyle mtop5" id="GradeStandardLable"></label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-1 text-right p0">-->
+<!--                                <span class="glyphicon glyphicon-arrow-right arrowShow"></span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-sm-3">-->
+<!--                            <div class="col-sm-11 text-center">-->
+<!--                                <a class=" btn btn-white stageBtn btn107" data-funcid="107" id="PersonManageBtn" style="border: 1px solid rgb(230, 230, 230);">-->
+<!--                                    <span class="glyphicon glyphicon-user btnlogo" ></span><br>-->
+<!--                                    <span id="PersonManageSpan"></span>-->
+<!--                                </a>-->
+<!--                                <div class="col-sm-12 p0">-->
+<!--                                    <label class="lableStyle mtop5" id="PersonManageLable"></label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-sm-3">-->
+<!--                            <div class="col-sm-11 text-center p0">-->
+<!--                                <a class=" btn btn-white stageBtn btn108" data-funcid="108" id="FrontManageBtn" style="border: 1px solid rgb(230, 230, 230);">-->
+<!--                                    <span class="glyphicon glyphicon-tasks btnlogo" ></span><br>-->
+<!--                                    <span id="FrontManageSpan"></span>-->
+<!--                                </a>-->
+<!--                                <div class="col-sm-12 p0">-->
+<!--                                    <label class="lableStyle mtop5" id="FrontManageLable"></label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        <div class="col-sm-3">
+                            <div class="col-sm-11 text-center p0">
+                                <a class="btn stageBtn btn-white btn201" data-funcid="201" id="SignUpBtn" style="border: 1px solid rgb(230, 230, 230);">
+                                    <span class="glyphicon glyphicon-thumbs-up btnlogo"></span><br>
+                                    <span id="SignUpSpan"></span>
+                                </a>
+                                <div class="col-sm-12 p0">
+                                    <label class="lableStyle mtop5" id="SignUpLable"></label>
+                                </div>
+                            </div>
+<!--                            <div class="col-sm-1 text-right p0">-->
+<!--                                <span class="glyphicon glyphicon-arrow-right arrowShow"></span>-->
+<!--                            </div>-->
+                        </div>
+                    </div>
+                </div>
+
+<!--                <div id="page2" class="stepPage apply">-->
+<!--                    <div class="col-sm-10 col-sm-offset-1 p0">-->
+<!--                        <div class="col-sm-3">-->
+<!--                            <div class="col-sm-11 text-center p0">-->
+<!--                                <a class="btn stageBtn btn-white btn201" data-funcid="201" id="SignUpBtn" style="border: 1px solid rgb(230, 230, 230);">-->
+<!--                                    <span class="glyphicon glyphicon-thumbs-up btnlogo"></span><br>-->
+<!--                                    <span id="SignUpSpan"></span>-->
+<!--                                </a>-->
+<!--                                <div class="col-sm-12 p0">-->
+<!--                                    <label class="lableStyle mtop5" id="SignUpLable"></label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-1 text-right p0">-->
+<!--                                <span class="glyphicon glyphicon-arrow-right arrowShow"></span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-sm-3">-->
+<!--                            <div class="col-sm-11 text-center p0">-->
+<!--                                <a class=" btn btn-white stageBtn btn202" data-funcid="202" id="SignUpCheckBtn" style="border: 1px solid rgb(230, 230, 230);">-->
+<!--                                    <span class="glyphicon glyphicon-eye-open btnlogo"></span><br>-->
+<!--                                    <span id="SignUpCheckSpan"></span>-->
+<!--                                </a>-->
+<!--                                <div class="col-sm-12 p0">-->
+<!--                                    <label class="lableStyle mtop5" id="SignUpCheckLable"></label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-sm-10 col-sm-offset-1 p0">-->
+<!--                        <div class="col-sm-12 p0">-->
+<!--                            <div class="col-sm-3">-->
+<!--                                <div class="col-sm-11 text-center p0 mt2rem">-->
+<!--                                    <span class="glyphicon glyphicon-arrow-down"></span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-sm-3">-->
+<!--                            <div class="col-sm-11 text-center p0">-->
+<!--                                <a class=" btn btn-white stageBtn btn203" data-funcid="203" id="UnitSummaryBtn" style="border: 1px solid rgb(230, 230, 230);margin-top: 20px;">-->
+<!--                                    <span class="glyphicon glyphicon-book"></span><br>-->
+<!--                                    <span id="UnitSummarySpan"></span>-->
+<!--                                </a>-->
+<!--                                <div class="col-sm-12 p0 ">-->
+<!--                                    <label class="lableStyle mtop5" id="UnitSummaryLable"></label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+<!--                <div id="page3" class="stepPage upload">-->
+<!--                    <div class="col-sm-10 col-sm-offset-1 p0">-->
+<!--                        <div class="col-sm-3">-->
+<!--                            <div class="col-sm-11 text-center p0">-->
+<!--                                <a class=" btn btn-white stageBtn btn301" data-funcid="301" id="UploadMaterialBtn" style="border: 1px solid rgb(230, 230, 230);">-->
+<!--                                    <span class="glyphicon glyphicon-arrow-up btnlogo"></span><br>-->
+<!--                                    <span id="UploadMaterialSpan"></span>-->
+<!--                                </a>-->
+<!--                                <div class="col-sm-12 p0">-->
+<!--                                    <label class="lableStyle mtop5" id="UploadMaterialLable"></label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-1 text-right p0">-->
+<!--                                <span class="glyphicon glyphicon-arrow-right arrowShow"></span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-sm-3">-->
+<!--                            <div class="col-sm-11 text-center p0">-->
+<!--                                <a class=" btn btn-white stageBtn btn302" data-funcid="302" id="MaterialCheckBtn" style="border: 1px solid rgb(230, 230, 230);">-->
+<!--                                    <span class="glyphicon glyphicon-eye-open btnlogo"></span><br>-->
+<!--                                    <span id="MaterialCheckSpan"></span>-->
+<!--                                </a>-->
+<!--                                <div class="col-sm-12 p0">-->
+<!--                                    <label class="lableStyle mtop5" id="MaterialCheckLable"></label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+
+                <div id="page2" class="stepPage sortilege">
+                    <div class="col-sm-10 col-sm-offset-1 p0">
+<!--                        <div class="col-sm-10 col-sm-offset-1 p0">-->
+                        <div class="col-sm-3">
+                            <div class="col-sm-11 text-center p0">
+                                <a class=" btn btn-white stageBtn btn211" data-funcid="211" id="MatchTitleBtn" style="border: 1px solid rgb(230, 230, 230);">
+                                    <span class="glyphicon glyphicon-pawn"></span><br>
+                                    <span id="MatchTitle"></span>
+                                </a>
+                                <div class="col-sm-12 p0">
+                                    <label class="lableStyle mtop5" id="MatchTitleLable"></label>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 text-right p0">
+                                                                <span class="glyphicon glyphicon-arrow-right arrowShow"></span>
+                                                            </div>
+                        </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-11 text-center p0">
+                                    <a class=" btn btn-white stageBtn btn401" data-funcid="401" id="AssessSectionBtn" style="border: 1px solid rgb(230, 230, 230);">
+                                        <span class="glyphicon glyphicon-pawn"></span><br>
+                                        <span id="AssessSectionSpan"></span>
+                                    </a>
+                                    <div class="col-sm-12 p0">
+                                        <label class="lableStyle mtop5" id="AssessSectionLable"></label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1 text-right p0">
+                                    <span class="glyphicon glyphicon-arrow-right arrowShow"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-11 text-center p0">
+                                    <a class=" btn btn-white stageBtn btn402" data-funcid="402" id="LoftNumberBtn" style="border: 1px solid rgb(230, 230, 230);">
+                                        <!--<span class="glyphicon glyphicon-option-vertical btnlogo"></span><br>-->
+                                        <span class="glyphicon glyphicon-bell btnlogo"></span><br>
+                                        <span id="LoftNumberSpan"></span>
+                                    </a>
+                                    <div class="col-sm-12 p0">
+                                        <label class="lableStyle mtop5" id="LoftNumberLable"></label>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-1 text-right p0">
+                                    <span class="glyphicon glyphicon-arrow-right arrowShow"></span>
+                                </div>
+                            </div>
+                        <div class="col-sm-3">
+                            <div class="col-sm-11 text-center p0">
+                                <a class=" btn btn-white stageBtn btn214" data-funcid="214" id="BallotMatchTitleBtn" style="border: 1px solid rgb(230, 230, 230);">
+                                    <span class="glyphicon glyphicon-pawn"></span><br>
+                                    <span id="BallotMatchTitle"></span>
+                                </a>
+                                <div class="col-sm-12 p0">
+                                    <label class="lableStyle mtop5" id="BallotMatchTitleLable"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div id="page3" class="stepPage match">
+                    <div class="col-sm-12 p0" style="margin-left: 10%">
+                        <div class="col-sm-12 p0">
+<!--                            <div class="col-sm-2  text-center">-->
+<!--                                <div class="col-sm-11 text-center p0">-->
+<!--                                    <label class="lableStyle mt2rem">签到室</label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2  text-center">-->
+<!--                                <div class="col-sm-11 text-center p0">-->
+<!--                                    <label class="lableStyle mt2rem">抽签室</label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <div class="col-sm-2  text-center">
+                                <div class="col-sm-11 text-center p0">
+                                    <label class="lableStyle mt2rem">比赛现场</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-2  text-center">
+                                <div class="col-sm-11 text-center p0">
+                                    <label class="lableStyle mt2rem">比赛现场</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 p0">
+<!--                            <div class="col-sm-2 ">-->
+<!--&lt;!&ndash;                                <div class="col-sm-11 text-center p0">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="col-sm-12 p0">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <a class=" btn btn-white stageBtn mt1rem btn501" data-funcid="501" id="SceneVerifyBtn" style="border: 1px solid rgb(230, 230, 230);">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <span class="glyphicon glyphicon-object-align-vertical btnlogo"></span><br>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <span id="SceneVerifySpan"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="col-sm-12 p0">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <label class="lableStyle mtop5" id="SceneVerifyLable"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="col-sm-1 text-right p0">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="glyphicon glyphicon-arrow-right arrowWordShow"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 ">-->
+<!--                                <div class="col-sm-11 text-center p0">-->
+<!--                                    <div class="col-sm-12 p0">-->
+<!--                                        <a class=" btn btn-white stageBtn mt1rem btn502" data-funcid="502" id="SampleSpeechListBtn" style="border: 1px solid rgb(230, 230, 230);">-->
+<!--                                            <span class="glyphicon glyphicon-tag btnlogo"></span><br>-->
+<!--                                            <span id="SampleSpeechListSpan"></span>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-sm-12 p0">-->
+<!--                                        <label class="lableStyle mtop5" id="SampleSpeechListLable"></label>-->
+<!--                                    </div>-->
+
+<!--                                </div>-->
+<!--                                <div class="col-sm-1 text-right p0">-->
+<!--                                    <span class="glyphicon glyphicon-arrow-right arrowWordShow"></span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 ">-->
+<!--                                <div class="col-sm-11 text-center p0">-->
+<!--                                    <div class="col-sm-12 p0">-->
+<!--                                        <a class=" btn btn-white stageBtn mt1rem btn504" data-funcid="504" id="DownloadPPTBtn" style="border: 1px solid rgb(230, 230, 230);padding-top: 1.8rem">-->
+<!--                                            <span class="glyphicon glyphicon-arrow-down btnlogo"></span><br>-->
+<!--                                            <span id="DownloadPPTSpan" style="white-space: normal"></span>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-sm-12 p0">-->
+<!--                                        <label class="lableStyle mtop5" id="DownloadPPTLable"></label>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-sm-1 text-right p0">-->
+<!--                                    <span class="glyphicon glyphicon-arrow-right arrowWordShow"></span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <div class="col-sm-2 ">
+                                <div class="col-sm-11 text-center p0">
+                                    <div class="col-sm-12 p0">
+                                        <a class=" btn btn-white stageBtn mt1rem btn505" data-funcid="505"  id="SceneControlBtn" style="border: 1px solid rgb(230, 230, 230);">
+                                            <span class="glyphicon glyphicon-unchecked btnlogo"></span><br>
+                                            <span id="SceneControlSpan"></span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-12 p0">
+                                        <label class="lableStyle mtop5" id="SceneControlLable"></label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1 text-right p0">
+                                                                        <span class="glyphicon glyphicon-arrow-right arrowWordShow"></span>
+                                                                    </div>
+                            </div>
+
+<!--                            <div class="col-sm-2 ">-->
+<!--                                <div class="col-sm-11 text-center p0">-->
+<!--                                    <div class="col-sm-12 p0">-->
+<!--                                        <a class=" btn btn-white btn-perfession stageBtn mt1rem btn507" data-funcid="507" id="OnsiteReviewBtn">-->
+<!--                                            <div class="perfessional">-->
+<!--                                                专-->
+<!--                                            </div>-->
+<!--                                            <span class="glyphicon glyphicon-home notclickLogo"></span><br>-->
+<!--                                            <span id="OnsiteReview"></span>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-sm-12 p0">-->
+<!--                                        <label class="lableStyle mtop5" id="OnsiteReviewLable"></label>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-sm-1 text-right p0">-->
+<!--                                    <span class="glyphicon glyphicon-arrow-right arrowWordShow"></span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+                                                        <div class="col-sm-2 ">
+                                                            <div class="col-sm-11 text-center p0">
+                                                                <div class="col-sm-12 p0" style="">
+
+                                                                    <a class=" btn btn-white stageBtn btn-perfession mt1rem btn507" data-funcid="507" id="SceneJudgeBtn">
+                                                                        <div class="perfessional">
+                                                                            专
+                                                                        </div>
+                                                                        <span class="glyphicon glyphicon-saved btnlogo"></span><br>
+                                                                        <span id="SceneJudgeSpan"></span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-sm-12 p0">
+                                                                    <label class="lableStyle mtop5" id="SceneJudgeLable"></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-1 text-right p0">
+                                                                                                    <span class="glyphicon glyphicon-arrow-right arrowWordShow"></span>
+                                                                                                </div>
+                                                        </div>
+
+                            <div class="col-sm-2 ">
+                                <div class="col-sm-11 text-center p0">
+                                    <div class="col-sm-12 p0">
+                                        <a class=" btn btn-white btn-perfession stageBtn mt1rem btn508" data-funcid="508" id="CompositeScoreBtn">
+                                            <div class="perfessional">
+                                                专
+                                            </div>
+                                            <span class="glyphicon glyphicon-home notclickLogo"></span><br>
+                                            <span id="CompositeScoreSpan"></span>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-12 p0">
+                                        <label class="lableStyle mtop5" id="CompositeScoreLable"></label>
+                                    </div>
+                                </div>
+                            </div>
+
+<!--                            <div class="col-sm-2 ">-->
+<!--                                <div class="col-sm-11 text-center p0">-->
+<!--                                    <div class="col-sm-12 p0">-->
+<!--                                        <a class=" btn btn-white stageBtn mt1rem btn503" data-funcid="503" id="LiveControlBtn" style="border: 1px solid rgb(230, 230, 230);">-->
+<!--                                            <span class="glyphicon glyphicon-retweet btnlogo"></span><br>-->
+<!--                                            <span id="LiveControlSpan"></span>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-sm-12 p0">-->
+<!--                                        <label class="lableStyle mtop5" id="LiveControlLable"></label>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+                        </div>
+                        <div class="col-sm-12 p0 mt1rem">
+
+<!--                            <div class="col-sm-2 ">-->
+<!--                                <div class="col-sm-11 text-center p0">-->
+<!--                                    <div class="col-sm-12 p0" style="">-->
+
+<!--                                        <a class=" btn btn-white stageBtn btn-perfession mt1rem btn506" data-funcid="506" id="MaterialJudgeBtn">-->
+<!--                                            <div class="perfessional">-->
+<!--                                                专-->
+<!--                                            </div>-->
+<!--                                            <span class="glyphicon glyphicon-saved btnlogo"></span><br>-->
+<!--                                            <span id="MaterialJudgeSpan"></span>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-sm-12 p0">-->
+<!--                                        <label class="lableStyle mtop5" id="MaterialJudgeLable"></label>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 ">-->
+<!--                                <div class="col-sm-11 text-center p0">-->
+<!--                                    <div class="col-sm-12 p0" style="">-->
+
+<!--                                        <a class=" btn btn-white stageBtn btn-perfession mt1rem btn507" data-funcid="507" id="SceneJudgeBtn">-->
+<!--                                            <div class="perfessional">-->
+<!--                                                专-->
+<!--                                            </div>-->
+<!--                                            <span class="glyphicon glyphicon-saved btnlogo"></span><br>-->
+<!--                                            <span id="SceneJudgeSpan"></span>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-sm-12 p0">-->
+<!--                                        <label class="lableStyle mtop5" id="SceneJudgeLable"></label>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-2 ">-->
+<!--                                <div class="col-sm-11 text-center p0">-->
+<!--                                    <div class="col-sm-12 p0">-->
+<!--                                        <a class=" btn btn-white btn-perfession stageBtn mt1rem btn508" data-funcid="508" id="CompositeScoreBtn">-->
+<!--                                            <div class="perfessional">-->
+<!--                                                专-->
+<!--                                            </div>-->
+<!--                                            <span class="glyphicon glyphicon-home notclickLogo"></span><br>-->
+<!--                                            <span id="CompositeScoreSpan"></span>-->
+<!--                                        </a>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-sm-12 p0">-->
+<!--                                        <label class="lableStyle mtop5" id="CompositeScoreLable"></label>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div id="page4" class="stepPage finish">
+                    <div class="col-sm-10 col-sm-offset-1  p0">
+                        <div class="col-sm-3">
+                            <div class="col-sm-11 text-center p0">
+                                <a class=" btn btn-white stageBtn btn601" data-funcid="601" id="JudgeScoreListBtn" style="border: 1px solid rgb(230, 230, 230);">
+                                    <span class="glyphicon glyphicon-file btnlogo"></span><br>
+                                    <span id="JudgeScoreListSpan"></span>
+                                </a>
+                                <div class="col-sm-12 p0">
+                                    <label class="lableStyle mtop5" id="JudgeScoreListLable"></label>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 text-right p0">
+                                <span class="glyphicon glyphicon-arrow-right arrowShow"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-sm-11 text-center p0">
+                                <a class=" btn btn-white stageBtn btn602" data-funcid="602" id="ScoreConfirmBtn" style="border: 1px solid rgb(230, 230, 230);">
+                                    <span class="glyphicon glyphicon-ok-circle btnlogo"></span><br>
+                                    <span id="ScoreConfirmSpan"></span>
+                                </a>
+                                <div class="col-sm-12 p0">
+                                    <label class="lableStyle mtop5" id="ScoreConfirmLable"></label>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 text-right p0">
+                                <span class="glyphicon glyphicon-arrow-right arrowShow"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="col-sm-11 text-center p0">
+                                <a class=" btn btn-white stageBtn btn603" data-funcid="603" id="DeductScoreBtn" style="border: 1px solid rgb(230, 230, 230);">
+                                    <span class="glyphicon glyphicon-pencil btnlogo"></span><br>
+                                    <span id="DeductScoreSpan"></span>
+                                </a>
+                                <div class="col-sm-12 p0">
+                                    <label class="lableStyle mtop5" id="DeductScoreLable"></label>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 text-right p0">
+                                <span class="glyphicon glyphicon-arrow-right arrowShow"></span>
+                            </div>
+                        </div>
+<!--                        <div class="col-sm-3">-->
+<!--                            <div class="col-sm-11 text-center p0">-->
+<!--                                <a class=" btn btn-white stageBtn btn604" data-funcid="604" id="ScoreRankBtn" style="border: 1px solid rgb(230, 230, 230);">-->
+<!--                                    <span class="glyphicon glyphicon-sort-by-attributes-alt btnlogo"></span><br>-->
+<!--                                    <span id="ScoreRankSpan"></span>-->
+<!--                                </a>-->
+<!--                                <div class="col-sm-12 p0">-->
+<!--                                    <label class="lableStyle mtop5" id="ScoreRankLable"></label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        <div class="col-sm-3">
+                            <div class="col-sm-11 text-center p0">
+                                <a class=" btn btn-white stageBtn btn605" data-funcid="605" id="ScoreMonitorBtn" style="border: 1px solid rgb(230, 230, 230);">
+                                    <span class="glyphicon glyphicon-expand btnlogo"></span><br>
+                                    <span id="ScoreMonitorSpan"></span>
+                                </a>
+                                <div class="col-sm-12 p0">
+                                    <label class="lableStyle mtop5" id="ScoreMonitorLable"></label>
+                                </div>
+                            </div>
+                        </div>
+<!--                        <div class="col-sm-12 p0">-->
+<!--                            <div class="col-sm-3">-->
+<!--                                <div class="col-sm-11 text-center p0 mt2rem">-->
+<!--                                    <span class="glyphicon glyphicon-arrow-down"></span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-sm-3">-->
+<!--                            <div class="col-sm-11 text-center p0">-->
+<!--                                <a class=" btn btn-white stageBtn btn605" data-funcid="605" id="ScoreMonitorBtn" style="border: 1px solid rgb(230, 230, 230);">-->
+<!--                                    <span class="glyphicon glyphicon-expand btnlogo"></span><br>-->
+<!--                                    <span id="ScoreMonitorSpan"></span>-->
+<!--                                </a>-->
+<!--                                <div class="col-sm-12 p0">-->
+<!--                                    <label class="lableStyle mtop5" id="ScoreMonitorLable"></label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>
+            <img src="img/pslogo.png" style="width:20px;height:20px;" />
+            <label id="footMatchName">四川省中小学青年教师教学竞赛</label>
+        </p>
+    </div>
+</div>
+
+
+
+<!--模态框-->
+<div id="changeMatchModal" class="modal fade" tabindex="-1" role="dialog" style="top: 25%;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" id="ciclose" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h5 class="modal-title"><span class="glyphicon glyphicon-bullhorn" style="color:#F17E3F;margin-right: 5px;"></span>切换赛事</h5>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row text-center" style="padding: 3rem 0;">
+                        <label style="font-weight: 500;">选择赛事</label>
+                        <select class="form-control" title="请选择" id="matid" style="width: 75%; display: inline-block;">
+                        </select>
+                    </div>
+                    <div class="row text-center" style="padding: 3rem 0;">
+                        <a class="btn btn-sm btn-info" id="btnSave" style="width: 25%;">确定</a>
+                        <a class="btn btn-sm btn-default" id="btnCancel" data-dismiss="modal" style="width: 25%;">关闭</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js/zzsCommon.min.js"></script>
+<script src="js/common.min.js"></script>
+<script src="js/MainFrm.js"></script>
+<script>
+    var step1 = new SetStep({
+        skin:1,
+        content: '.stepCont1',
+        descriptionHeader: ['筹划准备阶段','抽签分组阶段', '现场评审阶段','赛事统计阶段'],
+        showBtn:true,
+    })
+</script>
+</html>

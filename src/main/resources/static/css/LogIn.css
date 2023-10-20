@@ -1,0 +1,95 @@
+body, html { width: 100%; height: 100%; }
+body{background: #f0f2f5}
+p { margin: 0; padding: 0; }
+.nomargin { margin: 0; }
+
+.con {background-size:cover; background-position: center top; }
+#header { display: flex; align-items: flex-end;height:68px; color: #405e7d; font-size: 22px; font-family: "YouYuan Microsoft YaHei ";font-weight:600;margin-top: 2%;}
+#header img {height: 70px;float: left; margin-top: 4px; margin-left:5%; }
+
+#header p { float: left; margin-top: 10px; margin-left: 8px; letter-spacing: 3px;font-size: 40px; font-family:'Microsoft YaHei';}
+.title-word {
+    color: #405e7d;
+    margin-left: 8px;
+    /*letter-spacing: 3px;*/
+    letter-spacing: 2px;
+    font-size: 1.7vw;
+    font-family:'Microsoft YaHei';
+    font-weight:600;
+    margin-top: 10px;
+}
+
+.con {height: calc(100%);}
+
+small {font-size: 92%;}
+.list-group-item{background: rgba(253, 251, 255, 0);border: none;color:#f15308;}
+.list-group-item small{color: #3e4f61}
+
+.server { height: 10%; box-sizing: border-box;}
+.server ul li{font-size: 23px;background: rgba(0, 0, 20, 0);}
+
+.con .server .select { border-right: #bcb4b4 solid 2px; height: 100%; text-align: center;}
+.con section .select:last-child { border: none; }
+.select p { margin-top:2px;font-weight: bold; font-size:18px; text-align: center; letter-spacing: 4px; color: white; }
+.select a { display: inline-block; }
+.select a small{color: white;}
+.select a:link { text-decoration: none; color: #8f7e7e; }
+.select a:hover {  text-decoration: underline; color: #68a6a8; }
+
+
+#login {
+    height: 400px;
+    background: rgb(233,239,255);
+    padding: 0;
+    margin-top: 6em;
+    border-radius: 40px;
+    margin-left: 13%;
+}
+.nBox { width: 70%; height: 40px; margin: 20px auto; color: #333; }
+.icon { display: block; float: left; width: 40px; height: 40px; line-height: 40px; text-align: center; font-size: 16px; color: #ccc; }
+
+.ipt { width: calc(100% - 40px); height: 40px; border: none;  }
+.ipt:focus { outline: none; }
+.thisbtn { display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 16px;
+ }
+.btn:hover, .btn:focus { color: #fff; }
+
+.ltitle {
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-family: cursive;
+    color: #346176;
+}
+.lBox { height: 320px; width: 390px; background: rgba(24,24,24,0.5); margin-top: calc(25% - 160px); margin-left: 15%; }
+.title {     
+    height: 50px;
+    margin-top: 20px;
+}
+.h-cimg { width: 100%; }
+#User { margin-top: 0; }
+
+#line1{margin-bottom: 32px;}
+
+.footer { width:100%;height: 45px; padding: 5px; box-sizing: border-box;  color: #2a2d2f; text-align: center; font-size: 15px;position: absolute;bottom: 30px; }
+.footer p { text-align: center; line-height: 20px; }
+
+
+#loginform .form-group{margin-bottom: 30px}
+#loginBtn{
+    border-radius: 5px;
+    background-color: #1c6b9e;
+    border-color: #1c6b9e;
+    height: 40px;
+    margin-top: 15px;
+}
+.divSpan{
+    background-color: #ffffff;border: 1px solid #ccc;border-right: none;border-radius: 5px 0 0 5px;
+}
+#User,#Pwd{border: 1px solid #ccc;border-left: none;border-radius: 0 5px 5px 0}
+#VerifyCode{border: 1px solid #ccc;border-radius: 5px;padding: 0 15px}
+

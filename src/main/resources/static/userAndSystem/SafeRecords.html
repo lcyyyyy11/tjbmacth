@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统安全记录</title>
+    <link rel="icon" href="../img/pslogo.png" type="image/x-icon" />
+    <link href="../css/bootstrap-min.css" rel="stylesheet" />
+    <link href="../css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="../css/ui.jqgrid-bootstrap.css" rel="stylesheet" />
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/grid.locale-cn.js"></script>
+    <script src="../js/bootstrap-min.js"></script>
+    <script src="../js/jquery.jqGrid.min.js"></script>
+    <script src="../js/bootstrap-datepicker.min.js"></script>
+    <style>
+        .btn{border-radius: 10px;color: #fff}
+        .btn:hover{color: #FFF}
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <form class="form-inline" role="form" id="opForm">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>时间</label>
+                    <input type="text" id="sDate" class="form-control" style="width:30%;"/>
+                    <label class="control-label">至</label>
+                    <input type="text" id="eDate" class="form-control" style="width:30%;"/>
+                    <a href="javascript:;" class="btn btn-default" id="reload" style="margin-left: 0.5rem;background-color: #4ac067;">刷新</a>
+                    <a href="javascript:;" class="btn btn-default" id="btnExport" style="background-color: #009CCC;">导出Excel</a>
+                </div>
+
+            </div>
+        </form>
+        <div class="row" style="margin-top: 10px">
+            <div class="col-sm-12 ">
+                <table id="Grid"></table>
+                <div id="Page"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/zzsCommon.min.js"></script>
+<script src="../js/common.min.js"></script>
+<script src="js/SafeRecords.js"></script>
+</html>

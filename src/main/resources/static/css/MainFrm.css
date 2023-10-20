@@ -1,0 +1,242 @@
+
+.text-white{color: #ffffff!important;}
+.logo{width: 96%;margin: auto;}
+#userRole{background-color: #ffffff;border-radius: 5px;width: 85px;color: #000;padding: 5px;}
+.uexit:hover{color: #ffffff;cursor: pointer;text-decoration: none}
+.uexit:active{color: #ffffff}
+#stepSpreate{border-top: 1px solid #dcdcdc;}
+
+#download:hover,#preview:hover{color: #ffffff;cursor: pointer;text-decoration: none}
+#download:active,#preview:active{color: #ffffff}
+
+.allstage{height: 20rem;}
+.stage {height:14rem;background: #fa7777;font-family: "YouYuan Microsoft YaHei ";color: #fff;text-align: center;font-size: 18px;}
+.stageWord{margin-top: 6rem;font-weight: 500;font-size: 17px;}
+.stageBtn{width: 15rem;margin-top: 3rem;}
+.stageWordBtn{margin-top: 4.7rem;}
+.arrowShow{margin-top: 8rem;margin-left:2rem;}
+.arrowWordShow{margin-top:6rem;margin-left:2rem;}
+#DownloadSpeechBtn{padding:6px 9px;}
+.notClickBtn{color: #000;background-color: #ccc;border-color: #ccc;height: 12rem;padding-top: 2.5rem}
+.notClickBtn:hover{color: #000;background-color: #ccc;border-color: #ccc;cursor: not-allowed;}
+.perfessional{position: absolute;width: 100px;color: white;background-color:cornflowerblue; transform:rotate(45deg);left: 75px;top:15px;font-family: 'Kaiti SC';font-size:15px;}
+.btn-perfession{border: 1px solid rgb(230, 230, 230);position: relative;overflow: hidden}
+
+#match .stage{height:28rem;}
+#prepare .stage{height:19rem;}
+#match .stageWord{margin-top: 12rem;font-weight: 500;}
+#prepare .stageWord{margin-top: 8rem;font-weight: 500;}
+#prepare .stageBtn{margin-top: 5rem;}
+#prepare .arrowShow{margin-top: 4.7rem;}
+.prepare{display: block;}
+.apply{display: none;}
+.upload{display: none;}
+.match{display: none;}
+.sortilege{display: none;}
+.finish{display: none;}
+
+.w18BF{width: 18%}
+.ml5{margin-left: 5px;}
+.mtop10{margin-top: 10px;}
+.mtop5{margin-top: 5px;}
+.mbottom10{margin-bottom: 10px;}
+.mbottom2{margin-bottom: 2px;}
+.p0{padding:0px;}
+.w20{width: 20%;}
+.mtop0{margin-top: 0px;}
+.mtop3rem{margin-top: 3.2rem;}
+.mt2rem{margin-top: 2rem;}
+.mt1rem{margin-top: 1rem;}
+.ml20BF{margin-left: 20%;}
+.ml8BF{margin-left: 8%}
+.w15BF{width: 15%}
+
+.btn-white{height:12rem;background-color: rgb(250, 255, 255);box-shadow: 1px 1px 1px rgba(199, 241, 234, 0.89);
+    -webkit-box-shadow: 1px 1px 1px rgba(199, 241, 234, 0.89);
+    -moz-box-shadow: 1px 1px 1px rgba(199, 241, 234, 0.89);padding-top: 2.5rem}
+.notclickLogo{color: rgb(254, 253, 245);font-size: 4rem;margin-bottom: 1rem;}
+.btnlogo{color: rgb(117, 191, 219) !important;font-size: 4rem;margin-bottom: 1rem;}
+.textnowrap{white-space: nowrap;}
+
+.colorWhite{color: #fff;}
+.colorGray{color: #f2f2f2;}
+.bgStageSelectColor{background: #fa5e5e;}
+.bgSelectColor{background: #f2f2f2;}
+.btn-white span{color: black;}
+.lableStyle{font-size: 13px;font-weight: 500;}
+
+.footer {width: 100%;height: 20px; background: #f8f8f8;position: fixed;bottom:10px;left: 0}
+
+/*.footer {width: 100%;height: 20px;  background: #f8f8f8;position: relative;margin-top: 3vh;left: 0}*/
+.footer p { font-size: 12px; text-align: center;}
+.footer p label{ font-weight: 500; }
+
+#ChangeMatchBtn,#SystemManageBtn{float: right;}
+
+ .btn-white:hover{
+    box-shadow: 3px 3px 3px rgba(177, 214, 219, 0.89); 
+    -webkit-box-shadow: 3px 3px 3px rgba(177, 214, 219, 0.89);
+    -moz-box-shadow: 3px 3px 3px rgba(177, 214, 219, 0.89);
+ }
+/*common css*/
+.stepPage{
+	display:none;
+	 min-height: 50vh;
+  }
+  .stepCont{
+	width:100%;
+  }
+  /* 最初字体颜色 */
+  .ystep-container {
+	/* font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Wenquanyi Micro Hei","Microsoft Yahei",Arial,sans-serif; */
+	display: inline-block;
+	position: relative;
+	color: rgb(153, 153, 146);
+	margin:5px 0px 20px 0px;
+
+	/* margin: 20px; */
+  }
+  .ystep-container ul {
+	list-style: none;
+  }
+  .ystep-container ul,.ystep-container li,.ystep-container p {
+	margin: 0;
+	padding: 0;
+  }
+  
+  /*size css*/
+  .ystep-lg {
+	/*width: 700px;*/
+	width:100%;
+	height: 60px;
+	font-size: 20px;
+	/*left: 15%;*/
+	line-height: .3;
+  }
+  
+  /*large size css*/
+  .ystep-lg .ystep-container-steps {
+	position: absolute;
+	top: 2px;
+	cursor: pointer;
+	z-index: 10;
+  }
+  .ystep-lg li {
+	float: left;
+	width: 100px;
+	/*height: 85px;*/
+	margin-right: 100px;
+	line-height: 30px;
+	  box-sizing: border-box;
+	 
+  }
+  
+  .ystep-lg .ystep-progress {
+	width: 400px;
+	height: 4px;
+	position: absolute;
+	top: 17px;
+	left: 15px;
+	float: left;
+	margin-right: 10px;
+	overflow: hidden;
+	 background: #C0C4CC;
+  }
+  .ystep-lg .ystep-progress-bar {
+	width: 400px;
+	height: 20px;
+	background: #e4e4e4;
+	display: inline-block;
+	
+  }
+  .ystep-lg .ystep-progress-highlight {
+	height: 20px;
+	  display: block;
+  }
+  
+  /* 完成步骤颜色 */
+  .ystep-blue .ystep-step-active {
+	color: #e49e65;
+  } 
+  /* 完成进度条颜色 */
+  .ystep-blue .ystep-progress-highlight {
+	background: #52bb49;
+  }
+  /*按钮样式*/
+  .ystep {
+	padding: 20px;
+  }
+  .step-button{
+	text-align: center;
+
+  
+  }
+  .step-button button{
+	margin: 15px;
+	/* margin-top: 40px; */
+	color: aliceblue;
+	background-color: rgb(134, 212, 117);
+	border-radius: 5px;
+	height: 35px;
+	width: 80px;
+  }
+  .step-button button:hover{
+	background-color: #4bac42;
+	color: aliceblue;
+  }
+  .ystep-lg .ystep-step-done .stepIcon{
+		border: 2px solid #2dad2d;
+			  border-radius: 20px;
+		  width: 30px;
+		  height: 30px;
+		  display: block;
+		  text-align: center;
+		  /* margin-top: 15px; */
+		  margin-left: 8px;
+		  color: transparent;
+		background:#fff url(../img/duihao.jpeg) no-repeat 2px 4px;
+		background-size: 80%;
+  }
+  
+  .ystep-lg .ystep-step-undone .stepIcon{
+		border: 2px solid #909399;
+		border-radius: 20px;
+		  width: 30px;
+		  height: 30px;
+		  display: block;
+		  text-align: center;
+		  /* margin-top: 15px; */
+		  margin-left: 8px;
+		  color:#909399;
+		  background: #fff;
+  }
+  .ystep-lg .ystep-step-active .stepIcon{
+		border: 2px solid #e9aa57;
+			  border-radius: 20px;
+		  width: 30px;
+		  height: 30px;
+		  display: block;
+		  text-align: center;
+		  /* margin-top: 15px; */
+		  margin-left: 8px;
+		  color:#e9aa57;
+		  background: #fff;
+  }
+   .ystep-container .descriptionHeader{
+	  width: 157px;
+	  /* margin-top: 5px; */
+	  font-size: 14px;
+	  
+	  
+  }
+   .ystep-container .description{
+	  width: 120px;
+	  font-size: 10px;
+  }
+@media (max-height: 842px) {
+	.footer {width: 100%;height: 20px;  background: #f8f8f8;position: relative;margin-top: 2vh;left: 0}
+}
+  
+  
+  
+
