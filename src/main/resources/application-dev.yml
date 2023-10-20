@@ -15,7 +15,7 @@ spring:
       port: 3306
       database: tjbmatch #TJBmatch
       username: root
-      password: dengziqi
+      password: 123456
 #      mysql:
 #      host: 192.168.0.64
 #      port: 43306
